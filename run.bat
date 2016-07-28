@@ -1,0 +1,1 @@
+.\core\cake\cake.exe -workspace=C:\Users\ld71\Desktop\temp -task=Core -mode=Release -output=C:\report -popup=true
