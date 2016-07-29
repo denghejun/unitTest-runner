@@ -24,4 +24,4 @@
 * `-popup`:不是必需的，默认：`true`，标识测试完成后，是否立即打开测试结果报表文件（`report-xxx.html`）;
 
 ### 约定
-该构建脚本默认会运行指定`-workspace`下所有`{-workspace}/**/bin/{-mode}/*.Tests.dll`程序集中的使用NUnit编写的单元测试（`-workspace`、`-mode`见上一小节`参数说明`）。
+该构建脚本默认会运行指定`-workspace`下所有`{-workspace}/**/bin/{-mode}/*.Tests.dll`程序集中的使用NUnit编写的单元测试（`-workspace`、`-mode`见上一小节**`参数说明`**）。
