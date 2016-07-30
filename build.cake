@@ -17,8 +17,18 @@ Task("Clean")
     CleanDirectories(allModeDir);
 });
 
-Task("Build")
+Task("Resolve")
 .IsDependentOn("Clean")
+.Does(()=>{
+    var slnFiles = GetFiles(System.IO.Path.Combine(slnDir, "*.sln"));
+    foreach(var sln in slnFiles)
+    {
+        NuGetRestore(sln);
+    }
+});
+
+Task("Build")
+.IsDependentOn("Resolve")
 .Does(()=>{
     var slnFiles = GetFiles(System.IO.Path.Combine(slnDir, "*.sln"));
     foreach(var sln in slnFiles)
