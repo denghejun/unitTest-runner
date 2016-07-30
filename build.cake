@@ -49,7 +49,9 @@ Task("Report").Does(()=>{
         DeleteFile("./TestResult.xml");
         if(popup)
         {
-            StartProcess("cmd","/c start "+GetFiles(outputReportFullPath).First().FullPath);
+            var arg = "/c start \"\" \""+GetFiles(outputReportFullPath).First().FullPath+"\"";
+            Information(arg);
+            StartProcess("cmd",arg);
         }
     }
 });
